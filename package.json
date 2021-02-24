@@ -84,6 +84,7 @@
     "docs": "remark . --output",
     "check-clean": "git diff --exit-code",
     "lint:js": "eslint --ext .ts,.tsx,.cjs,.md,.mjs --ignore-path .gitignore .",
+    "lint-fix": "eslint --fix",
     "lint:editorconfig": "editorconfig-checker",
     "lint": "run-s lint:editorconfig lint:js",
     "unit": "cross-env FILES_PATTERN=\"test-bundles/unit/**/*.js\" karma start karma.conf.cjs",
