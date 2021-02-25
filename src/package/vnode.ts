@@ -1,3 +1,11 @@
+/*
+ * @Date: 2021-02-23 11:20:13
+ * @FilePath: /snabbdom/src/package/vnode.ts
+ * @Autor: wangjiguang
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2021-02-23 15:07:57
+ * @Description:
+ */
 import { Hooks } from './hooks'
 import { AttachData } from './helpers/attachto'
 import { VNodeStyle } from './modules/style'
@@ -11,11 +19,17 @@ import { Hero } from './modules/hero'
 export type Key = string | number
 
 export interface VNode {
+  // 选择器
   sel: string | undefined
+  // 传入的对象
   data: VNodeData | undefined
+  // 子节点，是一个数组
   children: Array<VNode | string> | undefined
+  // dom节点
   elm: Node | undefined
+  // 与children互斥，字符串
   text: string | undefined
+  // 从data中获取
   key: Key | undefined
 }
 
